@@ -3,6 +3,45 @@
 }
 
 .tableWrapper {
-  max-height: 400px;
+  max-height: 500px;
   overflow: auto;
 }
+
+.detailsTable {
+	font-size:15px;
+}
+
+.detailsTable tr {
+	border-top:solid 1px lightgray;
+	border-bottom:solid 1px lightgray;
+}
+
+.detailsTable td {
+	padding-top:10px;
+	padding-bottom:10px;
+}
+.infoLabel {
+	font-weight:bold;
+	text-align:right;
+}
+
+.infoData {
+
+}
+
+.spacer{
+	width:18px;
+}
+
+.verticalSpacer {
+	height:10px;
+}
+
+#mapContainer {
+}
+
+#map {
+	height:400px;
+	width:400px;
+}
+

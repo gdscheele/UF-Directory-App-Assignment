@@ -1,4 +1,4 @@
-angular.module('listings').factory('Listings', function() {
+angular.module('listings').factory('listings', function() {
   var listings = {
     entries : [
         {
