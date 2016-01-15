@@ -7,7 +7,7 @@
 
   </head>
   <body ng-app="directoryApp">
-    <toaster-container toaster-options="{'time-out': 3000, 'position-class': 'toast-bottom-left'}"></toaster-container>
+    <toaster-container toaster-options="{'time-out': 3000, 'position-class': 'toast-bottom-right'}"></toaster-container>
 
     <div class="container">
       <div class="row">
@@ -31,11 +31,11 @@
                   <th>Building Name</th>
                   <th></th>
                 </tr>
-                <tr ng-if="listings.length > 0" ng-repeat="listing in listings | filter:{name: searchText} | orderBy:'code'" ng-click="showDetails(listing.code)">
-                  <td>{{listing.code}}</td>
-                  <td>{{listing.name}}</td>
-                  <td ng-click="deleteListing($index)" title="delete listing" style="cursor:pointer">
-                    <span class="glyphicon glyphicon-trash" style="cursor:pointer"></span>
+                <tr class="clickable" ng-if="listings.length > 0" ng-repeat="listing in listings | filter:{name: searchText} | orderBy:'code'" ng-click="showDetails(listing.code)">
+                  <td class="clickable" title="view listing details">{{listing.code}}</td>
+                  <td class="clickable" title="view listing details">{{listing.name}}</td>
+                  <td ng-click="deleteListing($index)" title="delete listing" class="clickable">
+                    <span class="glyphicon glyphicon-trash clickable" style="color:#D00000"></span>
                   </td>
                 </tr>
                 <tr ng-if="listing.length <= 0">
@@ -63,11 +63,11 @@
                 </div>
                 <div class="form-group">
                   <label for="lat">Latitude:</label>
-                  <input type="number" class="form-control" id="lat" ng-model="newListing.latitude">
+                  <input type="number" class="form-control" id="lat" ng-model="newListing.coordinates.latitude">
                 </div>
                 <div class="form-group">
                   <label for="long">Longitude:</label>
-                  <input type="number" class="form-control" id="long" ng-model="newListing.longitude">
+                  <input type="number" class="form-control" id="long" ng-model="newListing.coordinates.longitude">
                 </div>
                 <div class="form-group">
                   <label for="addr">Address:</label>

@@ -7,6 +7,10 @@
   overflow: auto;
 }
 
+.clickable {
+	cursor:pointer;
+}
+
 .detailsTable {
 	font-size:15px;
 }
@@ -14,6 +18,7 @@
 .detailsTable tr {
 	border-top:solid 1px lightgray;
 	border-bottom:solid 1px lightgray;
+
 }
 
 .detailsTable td {

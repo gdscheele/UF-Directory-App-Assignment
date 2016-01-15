@@ -13,6 +13,8 @@ angular.module('listings', ['toaster']).controller('ListingsController', ['$scop
      */
     $scope.addListing = function() {
       $scope.listings.push($scope.newListing);
+      console.log($scope.newListing);
+      console.log($scope.listings);
       $scope.newListing = '';
       toaster.pop('success', "Hooray!", "Listing has been saved.");
     };
