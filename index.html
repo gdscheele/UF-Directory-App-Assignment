@@ -34,7 +34,7 @@
                 <tr class="clickable" ng-if="listings.length > 0" ng-repeat="listing in listings | filter:{name: searchText} | orderBy:'code'" ng-click="showDetails(listing.code)">
                   <td class="clickable" title="view listing details">{{listing.code}}</td>
                   <td class="clickable" title="view listing details">{{listing.name}}</td>
-                  <td ng-click="deleteListing($index)" title="delete listing" class="clickable">
+                  <td ng-click="deleteListing(listing.code)" title="delete listing" class="clickable">
                     <span class="glyphicon glyphicon-trash clickable" style="color:#D00000"></span>
                   </td>
                 </tr>

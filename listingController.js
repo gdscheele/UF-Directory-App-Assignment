@@ -19,8 +19,12 @@ angular.module('listings', ['toaster']).controller('ListingsController', ['$scop
       toaster.pop('success', "Hooray!", "Listing has been saved.");
     };
 
-    $scope.deleteListing = function(index) {
-      $scope.listings.splice(index, 1);
+    $scope.deleteListing = function(code) {
+      $scope.listings.forEach(function(element, index, array) {
+        if(element.code == code){
+          $scope.listings.splice(index, 1);
+        }
+      });
     };
 
     $scope.showDetails = function(code) {
